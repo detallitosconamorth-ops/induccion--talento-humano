@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la Familia | Detallitos Con Amor</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans for Luxury aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                        heading: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        luxury: {
+                            50: '#FAF8F5',   // Warm Soft Ivory / Base background
+                            100: '#F4E3DF',  // Soft Blush Ivory
+                            200: '#EAD1CB',  // Muted Rose Gold Pearl
+                            300: '#D8A49B',  // Light Rose Gold Accent
+                            400: '#C88A83',  // Signature Rose Gold
+                            500: '#B8736C',  // Deep Soft Rose
+                            600: '#9C5852',  // Warm Elegant Rose
+                            700: '#7E423D',  // Deep Copper Rose
+                            800: '#4A4441',  // Soft Slate Gray
+                            900: '#2D2926',  // Deep Luxury Charcoal Text
+                        },
+                        champagne: {
+                            100: '#FFFDFB',
+                            200: '#F7F1E5',
+                            300: '#E8DCC4',
+                            400: '#D4C4A8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF8F5;
+            color: #2D2926;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .glass-card {
+            background: rgba(255, 253, 251, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(200, 138, 131, 0.22);
+        }
+        .luxury-gradient {
+            background: linear-gradient(135deg, #FFFDFB 0%, #F9ECE8 50%, #FAF8F5 100%);
+        }
+        .gold-border {
+            border: 1px solid rgba(200, 138, 131, 0.3);
+        }
+        #toast {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        /* Style when editing is active */
+        .editable-active [contenteditable="true"] {
+            outline: 2px dashed #C88A83 !important;
+            outline-offset: 4px;
+            border-radius: 6px;
+            background-color: rgba(255, 253, 251, 0.9);
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Plus Jakarta Sans, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-bottom-24{bottom:-6rem}.-left-24{left:-6rem}.-left-4{left:-1rem}.-left-\[11px\]{left:-11px}.-right-24{right:-6rem}.-top-24{top:-6rem}.-top-4{top:-1rem}.bottom-5{bottom:1.25rem}.right-5{right:1.25rem}.top-0{top:0px}.top-1\.5{top:0.375rem}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.ml-4{margin-left:1rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-square{aspect-ratio:1 / 1}.h-1\.5{height:0.375rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-20{height:5rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-44{height:11rem}.h-5{height:1.25rem}.h-56{height:14rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-96{height:24rem}.w-1\.5{width:0.375rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-44{width:11rem}.w-5{width:1.25rem}.w-56{width:14rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-96{width:24rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.translate-y-24{--tw-translate-y:6rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.resize-none{resize:none}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem * var(--tw-space-x-reverse));margin-left:calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.875rem * var(--tw-space-x-reverse));margin-left:calc(0.875rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-24 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(6rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(6rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.scroll-smooth{scroll-behavior:smooth}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-luxury-200{--tw-border-opacity:1;border-color:rgb(234 209 203 / var(--tw-border-opacity, 1))}.border-luxury-200\/50{border-color:rgb(234 209 203 / 0.5)}.border-luxury-200\/60{border-color:rgb(234 209 203 / 0.6)}.border-luxury-200\/80{border-color:rgb(234 209 203 / 0.8)}.border-luxury-300\/40{border-color:rgb(216 164 155 / 0.4)}.border-luxury-300\/60{border-color:rgb(216 164 155 / 0.6)}.border-luxury-300\/80{border-color:rgb(216 164 155 / 0.8)}.border-luxury-400\/30{border-color:rgb(200 138 131 / 0.3)}.border-luxury-400\/40{border-color:rgb(200 138 131 / 0.4)}.border-luxury-50{--tw-border-opacity:1;border-color:rgb(250 248 245 / var(--tw-border-opacity, 1))}.border-luxury-700{--tw-border-opacity:1;border-color:rgb(126 66 61 / var(--tw-border-opacity, 1))}.border-luxury-800{--tw-border-opacity:1;border-color:rgb(74 68 65 / var(--tw-border-opacity, 1))}.border-white\/10{border-color:rgb(255 255 255 / 0.1)}.border-white\/40{border-color:rgb(255 255 255 / 0.4)}.bg-champagne-100{--tw-bg-opacity:1;background-color:rgb(255 253 251 / var(--tw-bg-opacity, 1))}.bg-champagne-200{--tw-bg-opacity:1;background-color:rgb(247 241 229 / var(--tw-bg-opacity, 1))}.bg-champagne-300\/30{background-color:rgb(232 220 196 / 0.3)}.bg-luxury-100{--tw-bg-opacity:1;background-color:rgb(244 227 223 / var(--tw-bg-opacity, 1))}.bg-luxury-200\/30{background-color:rgb(234 209 203 / 0.3)}.bg-luxury-400{--tw-bg-opacity:1;background-color:rgb(200 138 131 / var(--tw-bg-opacity, 1))}.bg-luxury-400\/20{background-color:rgb(200 138 131 / 0.2)}.bg-luxury-50{--tw-bg-opacity:1;background-color:rgb(250 248 245 / var(--tw-bg-opacity, 1))}.bg-luxury-50\/40{background-color:rgb(250 248 245 / 0.4)}.bg-luxury-50\/80{background-color:rgb(250 248 245 / 0.8)}.bg-luxury-500{--tw-bg-opacity:1;background-color:rgb(184 115 108 / var(--tw-bg-opacity, 1))}.bg-luxury-900{--tw-bg-opacity:1;background-color:rgb(45 41 38 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-white\/5{background-color:rgb(255 255 255 / 0.05)}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-luxury-100\/60{--tw-gradient-from:rgb(244 227 223 / 0.6) var(--tw-gradient-from-position);--tw-gradient-to:rgb(244 227 223 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-luxury-100\/80{--tw-gradient-from:rgb(244 227 223 / 0.8) var(--tw-gradient-from-position);--tw-gradient-to:rgb(244 227 223 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-luxury-500{--tw-gradient-from:#B8736C var(--tw-gradient-from-position);--tw-gradient-to:rgb(184 115 108 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-luxury-900{--tw-gradient-from:#2D2926 var(--tw-gradient-from-position);--tw-gradient-to:rgb(45 41 38 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-champagne-100{--tw-gradient-to:rgb(255 253 251 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #FFFDFB var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-luxury-400{--tw-gradient-to:rgb(200 138 131 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #C88A83 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-luxury-800{--tw-gradient-to:rgb(74 68 65 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #4A4441 var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-luxury-300{--tw-gradient-to:#D8A49B var(--tw-gradient-to-position)}.to-luxury-900{--tw-gradient-to:#2D2926 var(--tw-gradient-to-position)}.to-white{--tw-gradient-to:#fff var(--tw-gradient-to-position)}.fill-luxury-100\/50{fill:rgb(244 227 223 / 0.5)}.stroke-\[1\.2\]{stroke-width:1.2}.stroke-\[1\.5\]{stroke-width:1.5}.stroke-\[2\.2\]{stroke-width:2.2}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-7{padding:1.75rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-24{padding-bottom:6rem}.pb-6{padding-bottom:1.5rem}.pl-8{padding-left:2rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.font-serif{font-family:Cormorant Garamond, serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.tracking-\[0\.25em\]{letter-spacing:0.25em}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-luxury-100{--tw-text-opacity:1;color:rgb(244 227 223 / var(--tw-text-opacity, 1))}.text-luxury-200{--tw-text-opacity:1;color:rgb(234 209 203 / var(--tw-text-opacity, 1))}.text-luxury-300{--tw-text-opacity:1;color:rgb(216 164 155 / var(--tw-text-opacity, 1))}.text-luxury-400{--tw-text-opacity:1;color:rgb(200 138 131 / var(--tw-text-opacity, 1))}.text-luxury-50{--tw-text-opacity:1;color:rgb(250 248 245 / var(--tw-text-opacity, 1))}.text-luxury-500{--tw-text-opacity:1;color:rgb(184 115 108 / var(--tw-text-opacity, 1))}.text-luxury-600{--tw-text-opacity:1;color:rgb(156 88 82 / var(--tw-text-opacity, 1))}.text-luxury-800{--tw-text-opacity:1;color:rgb(74 68 65 / var(--tw-text-opacity, 1))}.text-luxury-900{--tw-text-opacity:1;color:rgb(45 41 38 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-luxury-400\/20{--tw-shadow-color:rgb(200 138 131 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-luxury-900\/10{--tw-shadow-color:rgb(45 41 38 / 0.1);--tw-shadow:var(--tw-shadow-colored)}.shadow-luxury-900\/5{--tw-shadow-color:rgb(45 41 38 / 0.05);--tw-shadow:var(--tw-shadow-colored)}.outline-none{outline:2px solid transparent;outline-offset:2px}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.selection\:bg-luxury-400 *::selection{--tw-bg-opacity:1;background-color:rgb(200 138 131 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-luxury-400::selection{--tw-bg-opacity:1;background-color:rgb(200 138 131 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-luxury-400:hover{--tw-border-opacity:1;border-color:rgb(200 138 131 / var(--tw-border-opacity, 1))}.hover\:bg-luxury-100:hover{--tw-bg-opacity:1;background-color:rgb(244 227 223 / var(--tw-bg-opacity, 1))}.hover\:bg-luxury-100\/50:hover{background-color:rgb(244 227 223 / 0.5)}.hover\:bg-luxury-100\/60:hover{background-color:rgb(244 227 223 / 0.6)}.hover\:bg-luxury-800:hover{--tw-bg-opacity:1;background-color:rgb(74 68 65 / var(--tw-bg-opacity, 1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:bg-white\/10:hover{background-color:rgb(255 255 255 / 0.1)}.hover\:text-luxury-500:hover{--tw-text-opacity:1;color:rgb(184 115 108 / var(--tw-text-opacity, 1))}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-luxury-400:focus{--tw-border-opacity:1;border-color:rgb(200 138 131 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-1:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-luxury-400:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(200 138 131 / var(--tw-ring-opacity, 1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-125{--tw-scale-x:1.25;--tw-scale-y:1.25;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:bg-luxury-900{--tw-bg-opacity:1;background-color:rgb(45 41 38 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:text-luxury-50{--tw-text-opacity:1;color:rgb(250 248 245 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:inline-flex{display:inline-flex}.sm\:w-auto{width:auto}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-10{padding:2.5rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}}@media (min-width: 768px){.md\:ml-32{margin-left:8rem}.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:p-12{padding:3rem}.md\:p-14{padding:3.5rem}.md\:p-8{padding:2rem}.md\:pl-12{padding-left:3rem}.md\:pt-16{padding-top:4rem}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:mx-0{margin-left:0px;margin-right:0px}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:justify-start{justify-content:flex-start}.lg\:space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.lg\:p-16{padding:4rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-left{text-align:left}.lg\:text-6xl{font-size:3.75rem;line-height:1}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Plus Jakarta Sans, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-bottom-24{bottom:-6rem}.-left-24{left:-6rem}.-left-4{left:-1rem}.-left-\[11px\]{left:-11px}.-right-24{right:-6rem}.-top-24{top:-6rem}.-top-4{top:-1rem}.bottom-5{bottom:1.25rem}.right-5{right:1.25rem}.top-0{top:0px}.top-1\.5{top:0.375rem}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.ml-4{margin-left:1rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-square{aspect-ratio:1 / 1}.h-1\.5{height:0.375rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-20{height:5rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-44{height:11rem}.h-5{height:1.25rem}.h-56{height:14rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-96{height:24rem}.w-1\.5{width:0.375rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-44{width:11rem}.w-5{width:1.25rem}.w-56{width:14rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-96{width:24rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.translate-y-24{--tw-translate-y:6rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.resize-none{resize:none}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem * var(--tw-space-x-reverse));margin-left:calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.875rem * var(--tw-space-x-reverse));margin-left:calc(0.875rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-24 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(6rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(6rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.scroll-smooth{scroll-behavior:smooth}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-luxury-200{--tw-border-opacity:1;border-color:rgb(234 209 203 / var(--tw-border-opacity, 1))}.border-luxury-200\/50{border-color:rgb(234 209 203 / 0.5)}.border-luxury-200\/60{border-color:rgb(234 209 203 / 0.6)}.border-luxury-200\/80{border-color:rgb(234 209 203 / 0.8)}.border-luxury-300\/40{border-color:rgb(216 164 155 / 0.4)}.border-luxury-300\/60{border-color:rgb(216 164 155 / 0.6)}.border-luxury-300\/80{border-color:rgb(216 164 155 / 0.8)}.border-luxury-400\/30{border-color:rgb(200 138 131 / 0.3)}.border-luxury-400\/40{border-color:rgb(200 138 131 / 0.4)}.border-luxury-50{--tw-border-opacity:1;border-color:rgb(250 248 245 / var(--tw-border-opacity, 1))}.border-luxury-700{--tw-border-opacity:1;border-color:rgb(126 66 61 / var(--tw-border-opacity, 1))}.border-luxury-800{--tw-border-opacity:1;border-color:rgb(74 68 65 / var(--tw-border-opacity, 1))}.border-white\/10{border-color:rgb(255 255 255 / 0.1)}.border-white\/40{border-color:rgb(255 255 255 / 0.4)}.bg-champagne-100{--tw-bg-opacity:1;background-color:rgb(255 253 251 / var(--tw-bg-opacity, 1))}.bg-champagne-200{--tw-bg-opacity:1;background-color:rgb(247 241 229 / var(--tw-bg-opacity, 1))}.bg-champagne-300\/30{background-color:rgb(232 220 196 / 0.3)}.bg-luxury-100{--tw-bg-opacity:1;background-color:rgb(244 227 223 / var(--tw-bg-opacity, 1))}.bg-luxury-200\/30{background-color:rgb(234 209 203 / 0.3)}.bg-luxury-400{--tw-bg-opacity:1;background-color:rgb(200 138 131 / var(--tw-bg-opacity, 1))}.bg-luxury-400\/20{background-color:rgb(200 138 131 / 0.2)}.bg-luxury-50{--tw-bg-opacity:1;background-color:rgb(250 248 245 / var(--tw-bg-opacity, 1))}.bg-luxury-50\/40{background-color:rgb(250 248 245 / 0.4)}.bg-luxury-50\/80{background-color:rgb(250 248 245 / 0.8)}.bg-luxury-500{--tw-bg-opacity:1;background-color:rgb(184 115 108 / var(--tw-bg-opacity, 1))}.bg-luxury-900{--tw-bg-opacity:1;background-color:rgb(45 41 38 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-white\/5{background-color:rgb(255 255 255 / 0.05)}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-luxury-100\/60{--tw-gradient-from:rgb(244 227 223 / 0.6) var(--tw-gradient-from-position);--tw-gradient-to:rgb(244 227 223 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-luxury-100\/80{--tw-gradient-from:rgb(244 227 223 / 0.8) var(--tw-gradient-from-position);--tw-gradient-to:rgb(244 227 223 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-luxury-500{--tw-gradient-from:#B8736C var(--tw-gradient-from-position);--tw-gradient-to:rgb(184 115 108 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-luxury-900{--tw-gradient-from:#2D2926 var(--tw-gradient-from-position);--tw-gradient-to:rgb(45 41 38 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-champagne-100{--tw-gradient-to:rgb(255 253 251 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #FFFDFB var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-luxury-400{--tw-gradient-to:rgb(200 138 131 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #C88A83 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-luxury-800{--tw-gradient-to:rgb(74 68 65 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #4A4441 var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-luxury-300{--tw-gradient-to:#D8A49B var(--tw-gradient-to-position)}.to-luxury-900{--tw-gradient-to:#2D2926 var(--tw-gradient-to-position)}.to-white{--tw-gradient-to:#fff var(--tw-gradient-to-position)}.fill-luxury-100\/50{fill:rgb(244 227 223 / 0.5)}.stroke-\[1\.2\]{stroke-width:1.2}.stroke-\[1\.5\]{stroke-width:1.5}.stroke-\[2\.2\]{stroke-width:2.2}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-7{padding:1.75rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-24{padding-bottom:6rem}.pb-6{padding-bottom:1.5rem}.pl-8{padding-left:2rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.font-serif{font-family:Cormorant Garamond, serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.tracking-\[0\.25em\]{letter-spacing:0.25em}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-luxury-100{--tw-text-opacity:1;color:rgb(244 227 223 / var(--tw-text-opacity, 1))}.text-luxury-200{--tw-text-opacity:1;color:rgb(234 209 203 / var(--tw-text-opacity, 1))}.text-luxury-300{--tw-text-opacity:1;color:rgb(216 164 155 / var(--tw-text-opacity, 1))}.text-luxury-400{--tw-text-opacity:1;color:rgb(200 138 131 / var(--tw-text-opacity, 1))}.text-luxury-50{--tw-text-opacity:1;color:rgb(250 248 245 / var(--tw-text-opacity, 1))}.text-luxury-500{--tw-text-opacity:1;color:rgb(184 115 108 / var(--tw-text-opacity, 1))}.text-luxury-600{--tw-text-opacity:1;color:rgb(156 88 82 / var(--tw-text-opacity, 1))}.text-luxury-800{--tw-text-opacity:1;color:rgb(74 68 65 / var(--tw-text-opacity, 1))}.text-luxury-900{--tw-text-opacity:1;color:rgb(45 41 38 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-luxury-400\/20{--tw-shadow-color:rgb(200 138 131 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-luxury-900\/10{--tw-shadow-color:rgb(45 41 38 / 0.1);--tw-shadow:var(--tw-shadow-colored)}.shadow-luxury-900\/5{--tw-shadow-color:rgb(45 41 38 / 0.05);--tw-shadow:var(--tw-shadow-colored)}.outline-none{outline:2px solid transparent;outline-offset:2px}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.selection\:bg-luxury-400 *::selection{--tw-bg-opacity:1;background-color:rgb(200 138 131 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-luxury-400::selection{--tw-bg-opacity:1;background-color:rgb(200 138 131 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-luxury-400:hover{--tw-border-opacity:1;border-color:rgb(200 138 131 / var(--tw-border-opacity, 1))}.hover\:bg-luxury-100:hover{--tw-bg-opacity:1;background-color:rgb(244 227 223 / var(--tw-bg-opacity, 1))}.hover\:bg-luxury-100\/50:hover{background-color:rgb(244 227 223 / 0.5)}.hover\:bg-luxury-100\/60:hover{background-color:rgb(244 227 223 / 0.6)}.hover\:bg-luxury-800:hover{--tw-bg-opacity:1;background-color:rgb(74 68 65 / var(--tw-bg-opacity, 1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:bg-white\/10:hover{background-color:rgb(255 255 255 / 0.1)}.hover\:text-luxury-500:hover{--tw-text-opacity:1;color:rgb(184 115 108 / var(--tw-text-opacity, 1))}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-luxury-400:focus{--tw-border-opacity:1;border-color:rgb(200 138 131 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-1:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-luxury-400:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(200 138 131 / var(--tw-ring-opacity, 1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-125{--tw-scale-x:1.25;--tw-scale-y:1.25;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:bg-luxury-900{--tw-bg-opacity:1;background-color:rgb(45 41 38 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:text-luxury-50{--tw-text-opacity:1;color:rgb(250 248 245 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:inline-flex{display:inline-flex}.sm\:w-auto{width:auto}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-10{padding:2.5rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}}@media (min-width: 768px){.md\:ml-32{margin-left:8rem}.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:p-12{padding:3rem}.md\:p-14{padding:3.5rem}.md\:p-8{padding:2rem}.md\:pl-12{padding-left:3rem}.md\:pt-16{padding-top:4rem}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:mx-0{margin-left:0px;margin-right:0px}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:justify-start{justify-content:flex-start}.lg\:space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.lg\:p-16{padding:4rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-left{text-align:left}.lg\:text-6xl{font-size:3.75rem;line-height:1}}</style></head>
+<body class="text-luxury-900 bg-luxury-50 antialiased selection:bg-luxury-400 selection:text-white editable-active">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform flex items-center space-x-3 bg-luxury-900 text-luxury-50 px-5 py-3.5 rounded-2xl shadow-2xl border border-luxury-400/40 translate-y-24 opacity-0 pointer-events-none">
+        <div id="toast-icon" class="p-1 rounded-full bg-luxury-400/20 text-luxury-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" aria-hidden="true" class="lucide lucide-check-circle w-5 h-5"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+        </div>
+        <span id="toast-msg" class="text-xs font-semibold tracking-wide">Modo Edición Activado. Puedes hacer clic y editar directamente los textos.</span>
+    </div>
+
+    <!-- Header / Sticky Navbar -->
+    <header class="sticky top-0 z-40 w-full glass-card border-b border-luxury-200/60 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo & Brand Name -->
+                <a href="#inicio" class="flex items-center space-x-3.5 group">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-luxury-500 via-luxury-400 to-luxury-300 flex items-center justify-center text-white shadow-md shadow-luxury-400/20 group-hover:scale-105 transition-transform duration-300 border border-white/40">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkle" aria-hidden="true" class="lucide lucide-sparkle w-5 h-5 stroke-[2.2]"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path></svg>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold tracking-tight text-luxury-900 font-serif block leading-none">Detallitos Con Amor</span>
+                        <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-luxury-400 mt-1 block">Portal de Inducción</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Buttons -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                    <a href="#inicio" class="px-4 py-2 rounded-xl text-xs font-bold tracking-wider uppercase text-luxury-800 hover:text-luxury-500 hover:bg-luxury-100/50 transition-all duration-200">Inicio</a>
+                    <a href="#historia" class="px-3 py-2 rounded-xl text-xs font-bold tracking-wider uppercase text-luxury-800 hover:text-luxury-500 hover:bg-luxury-100/50 transition-all duration-200">Historia</a>
+                    <a href="#valores" class="px-3 py-2 rounded-xl text-xs font-bold tracking-wider uppercase text-luxury-800 hover:text-luxury-500 hover:bg-luxury-100/50 transition-all duration-200">Valores</a>
+                    <a href="#logros" class="px-3 py-2 rounded-xl text-xs font-bold tracking-wider uppercase text-luxury-800 hover:text-luxury-500 hover:bg-luxury-100/50 transition-all duration-200">Logros</a>
+                    <a href="#politicas" class="px-3 py-2 rounded-xl text-xs font-bold tracking-wider uppercase text-luxury-800 hover:text-luxury-500 hover:bg-luxury-100/50 transition-all duration-200">Políticas</a>
+                    <a href="#beneficios" class="px-3 py-2 rounded-xl text-xs font-bold tracking-wider uppercase text-luxury-800 hover:text-luxury-500 hover:bg-luxury-100/50 transition-all duration-200">Beneficios</a>
+                    <a href="#documentos" class="px-3 py-2 rounded-xl text-xs font-bold tracking-wider uppercase text-luxury-800 hover:text-luxury-500 hover:bg-luxury-100/50 transition-all duration-200">Documentos</a>
+                    <a href="#contacto" class="px-3 py-2 rounded-xl text-xs font-bold tracking-wider uppercase text-luxury-800 hover:text-luxury-500 hover:bg-luxury-100/50 transition-all duration-200">Contacto</a>
+                </nav>
+
+                <!-- Actions: Edit Mode Toggle & WhatsApp CTA -->
+                <div class="flex items-center space-x-3">
+                    <button id="toggle-edit-btn" onclick="toggleEditMode()" class="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider border border-luxury-300/80 hover:bg-luxury-100/50 transition-all flex items-center space-x-1.5 shadow-sm bg-luxury-900 text-luxury-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="edit-3" aria-hidden="true" class="lucide lucide-edit-3 w-3.5 h-3.5"><path d="M13 21h8"></path><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path></svg>
+                        <span id="edit-btn-text">Guardar Edición</span>
+                    </button>
+
+                    <a href="https://wa.me/573052554170" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center space-x-2 bg-luxury-900 hover:bg-luxury-800 text-luxury-50 px-4 py-2.5 rounded-xl text-xs font-bold tracking-wider uppercase shadow-sm border border-luxury-700 transition-all hover:-translate-y-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4 text-luxury-300"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                        <span>WhatsApp TH</span>
+                    </a>
+
+                    <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-luxury-800 hover:bg-luxury-100/50 focus:outline-none" aria-label="Abrir menú">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Nav -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-luxury-200 bg-champagne-100 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <a href="#inicio" class="mobile-nav-link block px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-luxury-900 hover:bg-luxury-100">Inicio</a>
+            <a href="#historia" class="mobile-nav-link block px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-luxury-900 hover:bg-luxury-100">Historia</a>
+            <a href="#valores" class="mobile-nav-link block px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-luxury-900 hover:bg-luxury-100">Valores</a>
+            <a href="#logros" class="mobile-nav-link block px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-luxury-900 hover:bg-luxury-100">Logros</a>
+            <a href="#politicas" class="mobile-nav-link block px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-luxury-900 hover:bg-luxury-100">Políticas de la Empresa</a>
+            <a href="#beneficios" class="mobile-nav-link block px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-luxury-900 hover:bg-luxury-100">Beneficios</a>
+            <a href="#documentos" class="mobile-nav-link block px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-luxury-900 hover:bg-luxury-100">Documentos Descargables</a>
+            <a href="#contacto" class="mobile-nav-link block px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-luxury-900 hover:bg-luxury-100">Contacto</a>
+            <a href="https://wa.me/573052554170" target="_blank" class="block w-full text-center bg-luxury-900 text-luxury-100 py-3 rounded-xl text-xs font-bold uppercase tracking-wider" rel="noopener noreferrer">Escribir por WhatsApp</a>
+        </div>
+    </header>
+
+    <main class="space-y-24 pb-24">
+
+        <!-- 1. HERO / INICIO SECTION -->
+        <section id="inicio" class="pt-8 md:pt-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="relative overflow-hidden rounded-3xl glass-card gold-border p-8 md:p-14 lg:p-16 shadow-xl shadow-luxury-900/5 luxury-gradient">
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-luxury-200/30 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-champagne-300/30 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/90 border border-luxury-200 text-luxury-600 text-[11px] font-bold tracking-widest uppercase shadow-sm">
+                            <span class="w-1.5 h-1.5 rounded-full bg-luxury-400 animate-pulse"></span>
+                            <span class="editable" contenteditable="true">¡Te damos la bienvenida a nuestro equipo!</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-luxury-900 leading-none tracking-tight font-serif">
+                            Elevando la emoción del detalle en <span class="italic text-luxury-500 font-serif editable" contenteditable="true">Detallitos Con Amor</span>
+                        </h1>
+                        <p class="text-base text-luxury-800 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0 editable" contenteditable="true">
+                            Estamos honrados de contar con tu talento. Este portal interactivo de inducción ha sido concebido por el equipo de Talento Humano para brindarte una bienvenida cálida, refinada e integral a nuestra cultura corporativa.
+                        </p>
+                        
+                        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#mision-vision" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-luxury-900 hover:bg-luxury-800 text-luxury-50 font-semibold text-xs tracking-widest uppercase shadow-lg shadow-luxury-900/10 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center space-x-2 border border-luxury-700">
+                                <span class="editable" contenteditable="true">Conocer Nuestra Cultura</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4 text-luxury-300"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                            </a>
+                            <a href="https://wa.me/573052554170" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white hover:bg-luxury-100/60 text-luxury-900 font-semibold text-xs tracking-widest uppercase gold-border shadow-sm transition-all flex items-center justify-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4 text-luxury-400"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                                <span class="editable" contenteditable="true">Hablar con T.T.H.H</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Visual Luxury Shield -->
+                    <div class="lg:col-span-5 flex justify-center relative">
+                        <div class="relative w-full max-w-md aspect-square rounded-3xl bg-gradient-to-tr from-luxury-100/60 via-champagne-100 to-white p-8 flex flex-col items-center justify-center shadow-xl gold-border">
+                            
+                            <div class="absolute -top-4 -left-4 glass-card px-4 py-3 rounded-2xl shadow-lg gold-border flex items-center space-x-3">
+                                <div class="p-2 bg-luxury-100 text-luxury-500 rounded-xl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="crown" aria-hidden="true" class="lucide lucide-crown w-4 h-4"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"></path><path d="M5 21h14"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-luxury-900 font-serif editable" contenteditable="true">Excelencia &amp; Pasión</p>
+                                    <p class="text-[10px] text-luxury-500 uppercase tracking-wider editable" contenteditable="true">Alta Calidad</p>
+                                </div>
+                            </div>
+
+                            <!-- Elegant Decorative Emblem -->
+                            <div class="w-56 h-56 rounded-full bg-luxury-50/80 border border-luxury-200/80 flex flex-col items-center justify-center shadow-inner relative p-4">
+                                <div class="w-44 h-44 rounded-full border border-luxury-300/40 flex flex-col items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart w-16 h-16 text-luxury-400 stroke-[1.2] fill-luxury-100/50"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                                    <span class="mt-2 text-center font-bold text-luxury-900 text-lg font-serif tracking-wide editable" contenteditable="true">Detallitos Con Amor</span>
+                                    <span class="text-[10px] text-luxury-500 uppercase tracking-widest mt-0.5 editable" contenteditable="true">Cultura de Elegancia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. MISIÓN Y VISIÓN -->
+        <section id="mision-vision" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-luxury-500 text-[11px] font-bold uppercase tracking-[0.25em] bg-white px-3.5 py-1.5 rounded-full gold-border editable" contenteditable="true">Filosofía Corporativa</span>
+                <h2 class="text-4xl font-bold text-luxury-900 tracking-tight font-serif mt-3 editable" contenteditable="true">Nuestro Propósito y Visión</h2>
+                <p class="mt-2 text-luxury-800 text-sm editable" contenteditable="true">Los pilares fundamentales que guían cada uno de nuestros pasos y creaciones.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Misión Card -->
+                <div class="glass-card rounded-3xl p-8 sm:p-10 shadow-lg shadow-luxury-900/5 gold-border hover:border-luxury-400 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-13 h-13 rounded-2xl bg-luxury-100 text-luxury-500 flex items-center justify-center mb-6 group-hover:bg-luxury-900 group-hover:text-luxury-50 transition-all duration-300 border border-luxury-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="compass" aria-hidden="true" class="lucide lucide-compass w-6 h-6 stroke-[1.5]"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-luxury-900 mb-4 font-serif editable" contenteditable="true">Nuestra Misión</h3>
+                    <p class="text-luxury-800 leading-relaxed text-sm sm:text-base font-normal editable" contenteditable="true">
+                        Diseñar, elaborar y entregar detalles de impecable sofisticación que conecten emociones profundas y transformen momentos especiales en recuerdos memorables, ofreciendo siempre la más alta calidad, distinción y un servicio humano verdaderamente excepcional.
+                    </p>
+                </div>
+
+                <!-- Visión Card -->
+                <div class="glass-card rounded-3xl p-8 sm:p-10 shadow-lg shadow-luxury-900/5 gold-border hover:border-luxury-400 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-13 h-13 rounded-2xl bg-champagne-200 text-luxury-600 flex items-center justify-center mb-6 group-hover:bg-luxury-900 group-hover:text-luxury-50 transition-all duration-300 border border-luxury-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye" aria-hidden="true" class="lucide lucide-eye w-6 h-6 stroke-[1.5]"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-luxury-900 mb-4 font-serif editable" contenteditable="true">Nuestra Visión</h3>
+                    <p class="text-luxury-800 leading-relaxed text-sm sm:text-base font-normal editable" contenteditable="true">
+                        Consolidarnos como la firma líder y referente en regalos de alta gama e innovación a nivel nacional, siendo reconocidos por la excelencia en el diseño, nuestra cultura organizacional de bienestar y el continuo desarrollo integral de cada colaborador.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. NUESTRA HISTORIA -->
+        <section id="historia" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-luxury-500 text-[10px] font-bold uppercase tracking-[0.25em] bg-white px-3.5 py-1.5 rounded-full gold-border editable" contenteditable="true">Trayectoria e Identidad</span>
+                <h2 class="text-4xl font-bold text-luxury-900 tracking-tight font-serif mt-3 editable" contenteditable="true">Nuestra Historia</h2>
+                <p class="mt-2 text-luxury-800 text-sm editable" contenteditable="true">Descubre cómo un sueño nacido del amor por los detalles se convirtió en una gran familia.</p>
+            </div>
+
+            <div class="relative border-l-2 border-luxury-300/60 ml-4 md:ml-32 space-y-12">
+                <!-- Timeline Item 1 -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-luxury-400 border-4 border-luxury-50 shadow-md group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-6 md:p-8 rounded-3xl gold-border shadow-sm">
+                        <span class="text-luxury-500 font-serif font-bold text-xl block mb-1 editable" contenteditable="true">El Origen • El Primer Detalle</span>
+                        <h3 class="text-2xl font-bold text-luxury-900 font-serif mb-2 editable" contenteditable="true">Nace una Pasión por Emocionar</h3>
+                        <p class="text-luxury-800 text-sm leading-relaxed editable" contenteditable="true">
+                            "Detallitos Con Amor" inició como una iniciativa artesanal enfocada en personalizar regalos llenos de significado. Con un taller íntimo y mucha dedicación, cada entrega buscaba transmitir afecto auténtico y crear momentos mágicos para nuestros primeros clientes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-luxury-400 border-4 border-luxury-50 shadow-md group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-6 md:p-8 rounded-3xl gold-border shadow-sm">
+                        <span class="text-luxury-500 font-serif font-bold text-xl block mb-1 editable" contenteditable="true">Crecimiento &amp; Equipo</span>
+                        <h3 class="text-2xl font-bold text-luxury-900 font-serif mb-2 editable" contenteditable="true">Formando una Familia Talentosa</h3>
+                        <p class="text-luxury-800 text-sm leading-relaxed editable" contenteditable="true">
+                            Gracias a la recomendación de nuestros clientes y el estándar de calidad, la demanda creció exponencialmente. Incorporamos profesionales creativos en diseño, logística y servicio al cliente, consolidando un equipo donde prima la calidad humana.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-luxury-400 border-4 border-luxury-50 shadow-md group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-6 md:p-8 rounded-3xl gold-border shadow-sm">
+                        <span class="text-luxury-500 font-serif font-bold text-xl block mb-1 editable" contenteditable="true">El Presente &amp; Futuro</span>
+                        <h3 class="text-2xl font-bold text-luxury-900 font-serif mb-2 editable" contenteditable="true">Innovación y Calidad Boutique</h3>
+                        <p class="text-luxury-800 text-sm leading-relaxed editable" contenteditable="true">
+                            Hoy en día, somos un referente en detalles de alta gama con procesos estandarizados, presencia digital y un canal directo de atención. Continuamos expandiéndonos contigo como parte esencial de nuestra historia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. VALORES CORPORATIVOS -->
+        <section id="valores" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-luxury-500 text-[10px] font-bold uppercase tracking-[0.25em] bg-white px-3.5 py-1.5 rounded-full gold-border editable" contenteditable="true">Cultura Organizacional</span>
+                <h2 class="text-4xl font-bold text-luxury-900 tracking-tight font-serif mt-3 editable" contenteditable="true">Nuestros Valores Centrales</h2>
+                <p class="mt-2 text-luxury-800 text-sm editable" contenteditable="true">Principios que rigen nuestro trabajo diario y las relaciones con nuestros compañeros y clientes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Valor 1 -->
+                <div class="glass-card p-7 rounded-3xl gold-border hover:border-luxury-400 transition-all duration-300 hover:-translate-y-1 text-center group">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-luxury-100 text-luxury-500 flex items-center justify-center mb-5 group-hover:bg-luxury-900 group-hover:text-luxury-50 transition-colors border border-luxury-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart-handshake" aria-hidden="true" class="lucide lucide-heart-handshake w-7 h-7 stroke-[1.5]"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-luxury-900 mb-2 font-serif editable" contenteditable="true">Amor y Dedicación</h3>
+                    <p class="text-luxury-800 text-xs leading-relaxed editable" contenteditable="true">Impregnamos calidez y pasión en cada empaque, mensaje y detalle entregado a nuestros clientes.</p>
+                </div>
+
+                <!-- Valor 2 -->
+                <div class="glass-card p-7 rounded-3xl gold-border hover:border-luxury-400 transition-all duration-300 hover:-translate-y-1 text-center group">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-luxury-100 text-luxury-500 flex items-center justify-center mb-5 group-hover:bg-luxury-900 group-hover:text-luxury-50 transition-colors border border-luxury-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="gem" aria-hidden="true" class="lucide lucide-gem w-7 h-7 stroke-[1.5]"><path d="M10.5 3 8 9l4 13 4-13-2.5-6"></path><path d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z"></path><path d="M2 9h20"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-luxury-900 mb-2 font-serif editable" contenteditable="true">Calidad Artesanal</h3>
+                    <p class="text-luxury-800 text-xs leading-relaxed editable" contenteditable="true">Cuidamos los más altos estándares visuales, estéticos y funcionales en cada producto terminado.</p>
+                </div>
+
+                <!-- Valor 3 -->
+                <div class="glass-card p-7 rounded-3xl gold-border hover:border-luxury-400 transition-all duration-300 hover:-translate-y-1 text-center group">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-luxury-100 text-luxury-500 flex items-center justify-center mb-5 group-hover:bg-luxury-900 group-hover:text-luxury-50 transition-colors border border-luxury-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" aria-hidden="true" class="lucide lucide-users w-7 h-7 stroke-[1.5]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-luxury-900 mb-2 font-serif editable" contenteditable="true">Trabajo en Equipo</h3>
+                    <p class="text-luxury-800 text-xs leading-relaxed editable" contenteditable="true">Nos apoyamos mutuamente con comunicación abierta, empatía y respeto entre todas las áreas.</p>
+                </div>
+
+                <!-- Valor 4 -->
+                <div class="glass-card p-7 rounded-3xl gold-border hover:border-luxury-400 transition-all duration-300 hover:-translate-y-1 text-center group">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-luxury-100 text-luxury-500 flex items-center justify-center mb-5 group-hover:bg-luxury-900 group-hover:text-luxury-50 transition-colors border border-luxury-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lightbulb" aria-hidden="true" class="lucide lucide-lightbulb w-7 h-7 stroke-[1.5]"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-luxury-900 mb-2 font-serif editable" contenteditable="true">Innovación Constante</h3>
+                    <p class="text-luxury-800 text-xs leading-relaxed editable" contenteditable="true">Buscamos constantemente nuevas tendencias, materiales sofisticados y mejoras para sorprender.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. LOGROS Y RECONOCIMIENTOS -->
+        <section id="logros" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-tr from-luxury-100/80 via-champagne-100 to-white rounded-3xl p-8 md:p-14 gold-border shadow-xl">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-luxury-500 text-[10px] font-bold uppercase tracking-[0.25em] bg-white px-3.5 py-1.5 rounded-full gold-border editable" contenteditable="true">Impacto &amp; Excelencia</span>
+                    <h2 class="text-4xl font-bold text-luxury-900 tracking-tight font-serif mt-3 editable" contenteditable="true">Logros e Hitos Alcanzados</h2>
+                    <p class="mt-2 text-luxury-800 text-sm editable" contenteditable="true">Resultados del esfuerzo conjunto que hoy nos llenan de orgullo y nos impulsan a seguir creciendo.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <!-- Metric 1 -->
+                    <div class="glass-card p-6 rounded-2xl gold-border">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="smile" aria-hidden="true" class="lucide lucide-smile w-8 h-8 mx-auto text-luxury-500 mb-2"><path d="M15 10V9"></path><path d="M16.472 15a6 6 0 01-8.943 0"></path><path d="M9 10V9"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                        <span class="text-4xl font-bold text-luxury-900 font-serif block editable" contenteditable="true">+15,000</span>
+                        <span class="text-xs font-semibold text-luxury-600 uppercase tracking-wider editable" contenteditable="true">Sonrisas Entregadas</span>
+                    </div>
+
+                    <!-- Metric 2 -->
+                    <div class="glass-card p-6 rounded-2xl gold-border">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" aria-hidden="true" class="lucide lucide-award w-8 h-8 mx-auto text-luxury-500 mb-2"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                        <span class="text-4xl font-bold text-luxury-900 font-serif block editable" contenteditable="true">99.4%</span>
+                        <span class="text-xs font-semibold text-luxury-600 uppercase tracking-wider editable" contenteditable="true">Satisfacción de Clientes</span>
+                    </div>
+
+                    <!-- Metric 3 -->
+                    <div class="glass-card p-6 rounded-2xl gold-border">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart w-8 h-8 mx-auto text-luxury-500 mb-2"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                        <span class="text-4xl font-bold text-luxury-900 font-serif block editable" contenteditable="true">+500</span>
+                        <span class="text-xs font-semibold text-luxury-600 uppercase tracking-wider editable" contenteditable="true">Diseños Exclusivos</span>
+                    </div>
+
+                    <!-- Metric 4 -->
+                    <div class="glass-card p-6 rounded-2xl gold-border">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-8 h-8 mx-auto text-luxury-500 mb-2"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <span class="text-4xl font-bold text-luxury-900 font-serif block editable" contenteditable="true">Premio 2025</span>
+                        <span class="text-xs font-semibold text-luxury-600 uppercase tracking-wider editable" contenteditable="true">Calidad en Servicio TH</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. POLÍTICAS DE LA EMPRESA -->
+        <section id="politicas" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white/95 rounded-3xl p-8 md:p-12 shadow-xl gold-border">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-luxury-500 text-[10px] font-bold uppercase tracking-[0.25em] bg-luxury-50 px-3.5 py-1.5 rounded-full gold-border editable" contenteditable="true">Normativa Interna</span>
+                    <h2 class="text-4xl font-bold text-luxury-900 mt-3 font-serif editable" contenteditable="true">Políticas de la Empresa</h2>
+                    <p class="text-luxury-800 mt-2 text-sm editable" contenteditable="true">Haz clic en cada sección para desplegar y consultar nuestros lineamientos organizacionales.</p>
+                </div>
+
+                <!-- Accordion Container -->
+                <div class="max-w-4xl mx-auto space-y-4" id="politicas-accordion">
+                    
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item gold-border rounded-2xl overflow-hidden bg-luxury-50/40">
+                        <button class="accordion-btn w-full p-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleAccordion(1)">
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-luxury-100 text-luxury-600 rounded-xl border border-luxury-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                                </div>
+                                <span class="text-xl font-bold text-luxury-900 font-serif editable" contenteditable="true">Jornada Laboral y Horarios</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" id="acc-icon-1" class="lucide lucide-chevron-down w-5 h-5 text-luxury-400 transform transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <div id="acc-content-1" class="px-6 pb-6 text-luxury-800 text-sm leading-relaxed border-t border-luxury-200/50 pt-4 hidden">
+                            <p class="mb-3 editable" contenteditable="true">En Detallitos Con Amor la puntualidad es símbolo de respeto profesional hacia nuestros compañeros y clientes.</p>
+                            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                <li class="editable" contenteditable="true"><strong>Horarios de atención y talleres:</strong> Lunes a Viernes de 8:00 AM a 5:00 PM y Sábados de 8:00 AM a 12:00 PM.</li>
+                                <li class="editable" contenteditable="true"><strong>Pausas Activas:</strong> Dos descansos diarios de 15 minutos diseñados para promover la ergonomía y bienestar mental.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item gold-border rounded-2xl overflow-hidden bg-luxury-50/40">
+                        <button class="accordion-btn w-full p-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleAccordion(2)">
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-luxury-100 text-luxury-600 rounded-xl border border-luxury-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart-handshake" aria-hidden="true" class="lucide lucide-heart-handshake w-5 h-5"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"></path></svg>
+                                </div>
+                                <span class="text-xl font-bold text-luxury-900 font-serif editable" contenteditable="true">Cultura de Respeto y Trato Humanizado</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" id="acc-icon-2" class="lucide lucide-chevron-down w-5 h-5 text-luxury-400 transform transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <div id="acc-content-2" class="hidden px-6 pb-6 text-luxury-800 text-sm leading-relaxed border-t border-luxury-200/50 pt-4">
+                            <p class="editable" contenteditable="true">Fomentamos un ambiente de trabajo libre de cualquier tipo de discriminación. La empatía, el trato afable y el respeto mutuo representan los pilares de nuestra cultura organizacional.</p>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item gold-border rounded-2xl overflow-hidden bg-luxury-50/40">
+                        <button class="accordion-btn w-full p-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleAccordion(3)">
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-luxury-100 text-luxury-600 rounded-xl border border-luxury-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" aria-hidden="true" class="lucide lucide-award w-5 h-5"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                                </div>
+                                <span class="text-xl font-bold text-luxury-900 font-serif editable" contenteditable="true">Estándares de Calidad y Presentación</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" id="acc-icon-3" class="lucide lucide-chevron-down w-5 h-5 text-luxury-400 transform transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <div id="acc-content-3" class="hidden px-6 pb-6 text-luxury-800 text-sm leading-relaxed border-t border-luxury-200/50 pt-4">
+                            <p class="editable" contenteditable="true">Cada detalle debe ser revisado bajo criterios rigurosos de empaque, acabado y presentación impecable antes de ser enviado a sus destinatarios finales.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. BENEFICIOS DEL COLABORADOR -->
+        <section id="beneficios" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-luxury-500 text-[10px] font-bold uppercase tracking-[0.25em] bg-white px-3.5 py-1.5 rounded-full gold-border editable" contenteditable="true">Programa de Bienestar</span>
+                <h2 class="text-4xl font-bold text-luxury-900 mt-3 font-serif editable" contenteditable="true">Beneficios para el Colaborador</h2>
+                <p class="text-luxury-800 mt-2 text-sm editable" contenteditable="true">Reconocemos tu esfuerzo y respaldamos tu calidad de vida.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Benefit 1 -->
+                <div class="glass-card p-7 rounded-3xl gold-border hover:border-luxury-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-luxury-100 text-luxury-600 flex items-center justify-center mb-5 border border-luxury-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="gift" aria-hidden="true" class="lucide lucide-gift w-6 h-6 stroke-[1.5]"><path d="M12 7v14"></path><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path><rect x="3" y="7" width="18" height="4" rx="1"></rect></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-luxury-900 mb-2 font-serif editable" contenteditable="true">Descuento Corporativo</h3>
+                    <p class="text-luxury-800 text-xs leading-relaxed editable" contenteditable="true">Accede a un 30% de descuento preferencial en todo el catálogo exclusivo de Detallitos Con Amor.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="glass-card p-7 rounded-3xl gold-border hover:border-luxury-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-champagne-200 text-luxury-600 flex items-center justify-center mb-5 border border-luxury-300/60">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles w-6 h-6 stroke-[1.5]"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-luxury-900 mb-2 font-serif editable" contenteditable="true">Día Remunerado de Cumpleaños</h3>
+                    <p class="text-luxury-800 text-xs leading-relaxed editable" contenteditable="true">Celebra tu día especial descansando junto a tus seres queridos totalmente remunerado.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="glass-card p-7 rounded-3xl gold-border hover:border-luxury-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-luxury-100 text-luxury-600 flex items-center justify-center mb-5 border border-luxury-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trophy" aria-hidden="true" class="lucide lucide-trophy w-6 h-6 stroke-[1.5]"><path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2"></path><path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2"></path><path d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3"></path><path d="M4 22h16"></path><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"></path><path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-luxury-900 mb-2 font-serif editable" contenteditable="true">Reconocimiento al Talento</h3>
+                    <p class="text-luxury-800 text-xs leading-relaxed editable" contenteditable="true">Bonificaciones trimestrales por excelencia de servicio, innovación y puntualidad laboral.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. DOCUMENTOS Y RECURSOS DESCARGABLES CON HIPERVÍNCULOS EDITABLES -->
+        <section id="documentos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-luxury-900 via-luxury-800 to-luxury-900 rounded-3xl p-8 md:p-12 text-white shadow-xl relative overflow-hidden border border-luxury-700">
+                <div class="relative z-10 max-w-3xl mb-10">
+                    <span class="inline-flex items-center space-x-2 bg-white/10 text-luxury-200 px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-luxury-700 backdrop-blur-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="folder-down" aria-hidden="true" class="lucide lucide-folder-down w-3.5 h-3.5"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M12 10v6"></path><path d="m15 13-3 3-3-3"></path></svg>
+                        <span class="editable" contenteditable="true">Recursos Digitales</span>
+                    </span>
+                    <h2 class="text-4xl sm:text-5xl font-bold mt-3 font-serif editable text-white" contenteditable="true">Centro de Documentación</h2>
+                    <p class="text-luxury-200 mt-2 text-sm editable" contenteditable="true">Haz clic para descargar o modificar los hipervínculos de los documentos institucionales.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="docs-container">
+                    
+                    <!-- Doc Item 1 -->
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 flex items-center justify-between hover:bg-white/10 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-luxury-400/20 text-luxury-200 rounded-xl border border-luxury-400/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" aria-hidden="true" class="lucide lucide-file-text w-5 h-5"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm font-serif editable" contenteditable="true">Manual de Convivencia e Inducción</h4>
+                                <p class="text-xs text-luxury-300 editable" contenteditable="true">PDF • 2.5 MB</p>
+                            </div>
+                        </div>
+                        <a href="https://example.com/manual-induccion.pdf" target="_blank" class="doc-link p-3 rounded-xl bg-luxury-100 text-luxury-900 hover:bg-white transition-all font-bold flex items-center space-x-1 shadow-sm" title="Abrir Documento" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" aria-hidden="true" class="lucide lucide-download w-3.5 h-3.5"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
+                            <span class="text-xs font-semibold">Ver</span>
+                        </a>
+                    </div>
+
+                    <!-- Doc Item 2 -->
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 flex items-center justify-between hover:bg-white/10 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-luxury-400/20 text-luxury-200 rounded-xl border border-luxury-400/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-badge" aria-hidden="true" class="lucide lucide-file-badge w-5 h-5"><path d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88"></path><circle cx="6" cy="14" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm font-serif editable" contenteditable="true">Reglamento Interno de Trabajo</h4>
+                                <p class="text-xs text-luxury-300 editable" contenteditable="true">PDF • 1.8 MB</p>
+                            </div>
+                        </div>
+                        <a href="https://example.com/reglamento-interno.pdf" target="_blank" class="doc-link p-3 rounded-xl bg-luxury-100 text-luxury-900 hover:bg-white transition-all font-bold flex items-center space-x-1 shadow-sm" title="Abrir Documento" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" aria-hidden="true" class="lucide lucide-download w-3.5 h-3.5"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
+                            <span class="text-xs font-semibold">Ver</span>
+                        </a>
+                    </div>
+
+                    <!-- Doc Item 3 -->
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 flex items-center justify-between hover:bg-white/10 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-luxury-400/20 text-luxury-200 rounded-xl border border-luxury-400/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clipboard-list" aria-hidden="true" class="lucide lucide-clipboard-list w-5 h-5"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm font-serif editable" contenteditable="true">Formulario de Registro de Colaborador</h4>
+                                <p class="text-xs text-luxury-300 editable" contenteditable="true">Google Forms / Enlace</p>
+                            </div>
+                        </div>
+                        <a href="https://docs.google.com/forms" target="_blank" class="doc-link p-3 rounded-xl bg-luxury-100 text-luxury-900 hover:bg-white transition-all font-bold flex items-center space-x-1 shadow-sm" title="Abrir Formulario" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="external-link" aria-hidden="true" class="lucide lucide-external-link w-3.5 h-3.5"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                            <span class="text-xs font-semibold">Abrir</span>
+                        </a>
+                    </div>
+
+                    <!-- Doc Item 4 -->
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 flex items-center justify-between hover:bg-white/10 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-luxury-400/20 text-luxury-200 rounded-xl border border-luxury-400/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" aria-hidden="true" class="lucide lucide-calendar w-5 h-5"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm font-serif editable" contenteditable="true">Plan de Fechas Especiales &amp; Bienestar</h4>
+                                <p class="text-xs text-luxury-300 editable" contenteditable="true">PDF • 1.0 MB</p>
+                            </div>
+                        </div>
+                        <a href="https://example.com/plan-beneficios.pdf" target="_blank" class="doc-link p-3 rounded-xl bg-luxury-100 text-luxury-900 hover:bg-white transition-all font-bold flex items-center space-x-1 shadow-sm" title="Abrir Documento" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" aria-hidden="true" class="lucide lucide-download w-3.5 h-3.5"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
+                            <span class="text-xs font-semibold">Ver</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CONTACTO DIRECTO DE TALENTO HUMANO -->
+        <section id="contacto" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Info Box -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-luxury-500 text-[10px] font-bold uppercase tracking-[0.25em] bg-white px-3.5 py-1.5 rounded-full gold-border">Atención Directa</span>
+                        <h2 class="text-4xl font-bold text-luxury-900 mt-3 font-serif editable" contenteditable="true">Contacto con Talento Humano</h2>
+                        <p class="text-luxury-800 mt-2 text-sm editable" contenteditable="true">Estamos a tu disposición para atender cualquier duda sobre tu inducción y bienvenida.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- WhatsApp Link Direct -->
+                        <a href="https://wa.me/573052554170" target="_blank" class="flex items-center space-x-4 glass-card p-4 rounded-2xl gold-border hover:border-luxury-400 transition-all group" rel="noopener noreferrer">
+                            <div class="p-3 bg-luxury-900 text-luxury-200 rounded-xl group-hover:scale-105 transition-transform border border-luxury-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-luxury-900 text-sm font-serif">WhatsApp de Talento Humano</h4>
+                                <p class="text-luxury-500 font-semibold text-xs">305 255 4170</p>
+                            </div>
+                        </a>
+
+                        <!-- Email Direct Link -->
+                        <a href="mailto:detallitosconamorth@gmail.com" class="flex items-center space-x-4 glass-card p-4 rounded-2xl gold-border hover:border-luxury-400 transition-all group" target="_blank" rel="noopener noreferrer">
+                            <div class="p-3 bg-luxury-100 text-luxury-600 rounded-xl group-hover:scale-105 transition-transform border border-luxury-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" aria-hidden="true" class="lucide lucide-mail w-5 h-5"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-luxury-900 text-sm font-serif">Correo Institucional</h4>
+                                <p class="text-luxury-500 font-semibold text-xs">detallitosconamorth@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="lg:col-span-7 glass-card p-8 sm:p-10 rounded-3xl gold-border shadow-xl">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-[10px] font-bold text-luxury-800 uppercase tracking-widest mb-2">Nombre Completo</label>
+                                <input type="text" id="nombre" required="" placeholder="Tu nombre" class="w-full px-4 py-3.5 rounded-xl border border-luxury-200 focus:ring-1 focus:ring-luxury-400 focus:border-luxury-400 outline-none bg-white/90 text-luxury-900 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold text-luxury-800 uppercase tracking-widest mb-2">Correo Electrónico</label>
+                                <input type="email" id="email" required="" placeholder="tu@correo.com" class="w-full px-4 py-3.5 rounded-xl border border-luxury-200 focus:ring-1 focus:ring-luxury-400 focus:border-luxury-400 outline-none bg-white/90 text-luxury-900 text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-bold text-luxury-800 uppercase tracking-widest mb-2">Consulta o Mensaje</label>
+                            <textarea id="mensaje" rows="4" required="" placeholder="Escribe aquí tus inquietudes..." class="w-full px-4 py-3.5 rounded-xl border border-luxury-200 focus:ring-1 focus:ring-luxury-400 focus:border-luxury-400 outline-none bg-white/90 text-luxury-900 text-sm resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-luxury-900 hover:bg-luxury-800 text-luxury-50 font-semibold text-xs uppercase tracking-widest shadow-md border border-luxury-700 transition-all flex items-center justify-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" aria-hidden="true" class="lucide lucide-send w-4 h-4 text-luxury-300"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                            <span>Enviar Mensaje a TH</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-900 text-luxury-300 py-12 border-t border-luxury-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex justify-center items-center space-x-2">
+                <div class="w-7 h-7 rounded-lg bg-luxury-500 flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkle" aria-hidden="true" class="lucide lucide-sparkle w-4 h-4"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path></svg>
+                </div>
+                <span class="text-xl font-bold text-white tracking-wide font-serif">Detallitos Con Amor</span>
+            </div>
+            <p class="text-xs text-luxury-400">WhatsApp: 3052554170 &nbsp;|&nbsp; Correo: detallitosconamorth@gmail.com</p>
+            <p class="text-[11px] text-luxury-500 max-w-md mx-auto">© 2026 Detallitos Con Amor. Portal de Inducción de Talento Humano.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic JavaScript -->
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Accordion functionality
+        function toggleAccordion(id) {
+            const content = document.getElementById(`acc-content-${id}`);
+            const icon = document.getElementById(`acc-icon-${id}`);
+            const isCurrentlyOpen = !content.classList.contains('hidden');
+
+            for (let i = 1; i <= 3; i++) {
+                const c = document.getElementById(`acc-content-${i}`);
+                const ic = document.getElementById(`acc-icon-${i}`);
+                if (c && ic) {
+                    c.classList.add('hidden');
+                    ic.classList.remove('rotate-180');
+                }
+            }
+
+            if (!isCurrentlyOpen) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            toggleAccordion(1);
+        });
+
+        // Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+            }, 3500);
+        }
+
+        // Handle Contact Form
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            showToast(`¡Muchas gracias ${nombre}! Tu consulta ha sido enviada al área de TH.`);
+            document.getElementById('contact-form').reset();
+        }
+
+        // Live Editing Mode Toggle for Talento Humano
+        let isEditMode = false;
+        function toggleEditMode() {
+            isEditMode = !isEditMode;
+            const editables = document.querySelectorAll('.editable');
+            const btnText = document.getElementById('edit-btn-text');
+            const toggleBtn = document.getElementById('toggle-edit-btn');
+
+            if (isEditMode) {
+                document.body.classList.add('editable-active');
+                editables.forEach(el => el.setAttribute('contenteditable', 'true'));
+                btnText.textContent = 'Guardar Edición';
+                toggleBtn.classList.remove('bg-white', 'text-luxury-600');
+                toggleBtn.classList.add('bg-luxury-900', 'text-luxury-50');
+                showToast('Modo Edición Activado. Puedes hacer clic y editar directamente los textos.');
+            } else {
+                document.body.classList.remove('editable-active');
+                editables.forEach(el => el.setAttribute('contenteditable', 'false'));
+                btnText.textContent = 'Modo Edición TH';
+                toggleBtn.classList.remove('bg-luxury-900', 'text-luxury-50');
+                toggleBtn.classList.add('bg-white', 'text-luxury-600');
+                showToast('Cambios de texto actualizados con éxito.');
+            }
+        }
+    </script>
+
+</body></html>
